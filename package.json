@@ -1,0 +1,27 @@
+{
+  "name": "b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --test dist/tests/cordic.test.js",
+    "start": "node dist/src/cli.js serve",
+    "cli": "node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/demo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "cordic": "dist/src/cli.js"
+  }
+}
